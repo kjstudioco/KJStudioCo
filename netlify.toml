@@ -1,0 +1,3 @@
+[build]
+  # Static site with no build step; serve files from the repository root.
+  publish = "."
