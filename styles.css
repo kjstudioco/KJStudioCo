@@ -144,3 +144,7 @@ button{font:inherit}
 .footer-socials a{font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;color:inherit;text-decoration:none;border-bottom:1px solid rgba(23,23,19,.28);padding-bottom:5px;transition:color .2s,border-color .2s}
 .footer-socials a:hover{color:#a48248;border-color:#a48248}
 @media(max-width:700px){.footer-socials{gap:14px;flex-wrap:wrap}.footer-socials a{font-size:.58rem}}
+
+/* Portfolio case-study links */
+.case-study-link{font-size:.58rem;letter-spacing:.08em;color:#9c7b43;white-space:nowrap;border-bottom:1px solid #c6a66a66;padding-bottom:5px;align-self:center;transition:color .2s,border-color .2s}.case-study-link:hover{color:var(--ink);border-color:var(--ink)}
+@media(max-width:700px){.project-meta{align-items:flex-start}.case-study-link{font-size:.55rem;margin-top:4px}}
