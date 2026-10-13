@@ -148,3 +148,14 @@ button{font:inherit}
 /* Portfolio case-study links */
 .case-study-link{font-size:.58rem;letter-spacing:.08em;color:#9c7b43;white-space:nowrap;border-bottom:1px solid #c6a66a66;padding-bottom:5px;align-self:center;transition:color .2s,border-color .2s}.case-study-link:hover{color:var(--ink);border-color:var(--ink)}
 @media(max-width:700px){.project-meta{align-items:flex-start}.case-study-link{font-size:.55rem;margin-top:4px}}
+
+
+/* Final polish: visible keyboard focus and responsive media safety */
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #a48248;outline-offset:4px}
+img{max-width:100%}
+html{scroll-padding-top:90px}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto!important}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal{opacity:1!important;transform:none!important}
+}
