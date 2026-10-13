@@ -37,3 +37,21 @@
 .case-footer h2{font:800 clamp(2rem,4vw,3.5rem)/1 var(--display);letter-spacing:-.07em}
 .case-footer a{font-size:.7rem;letter-spacing:.08em;color:var(--gold);text-transform:uppercase}
 @media(max-width:700px){.case-top{padding:18px 5vw}.case-hero{padding:58px 5vw 35px}.case-hero h1{font-size:clamp(3.3rem,16vw,5.5rem)}.case-intro{align-items:flex-start;flex-direction:column}.case-stamp{white-space:normal}.case-cover{margin:0 3vw;height:470px}.case-cover-copy strong{font-size:clamp(3rem,15vw,5rem)}.case-details{grid-template-columns:1fr;gap:20px;padding:25px 5vw;margin:35px auto}.case-section{padding:20px 5vw 55px}.case-grid,.case-points{grid-template-columns:1fr}.case-tile{min-height:330px}.case-disclaimer{padding:22px 5vw}.case-footer{align-items:flex-start;flex-direction:column;padding:35px 5vw}}
+
+
+/* Final polish: focus states, narrow-screen overflow protection, and motion preferences */
+.case-page{overflow-x:hidden}
+.case-top a:focus-visible,.case-footer a:focus-visible,.case-back:focus-visible{outline:2px solid #9c7b43;outline-offset:5px}
+.case-section img{max-width:100%}
+.case-section [style*="grid-template-columns"]{min-width:0}
+.case-intro p,.case-point p,.case-section>p{overflow-wrap:anywhere}
+@media(max-width:420px){
+  .case-top{gap:12px;align-items:flex-start}
+  .case-back{max-width:48%;line-height:1.6;text-align:right}
+  .case-cover{height:390px}
+  .case-detail strong{overflow-wrap:anywhere}
+  .case-section [style*="grid-template-columns:repeat(2"]{grid-template-columns:1fr!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .case-page *, .case-page *::before, .case-page *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
