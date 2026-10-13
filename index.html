@@ -11,6 +11,7 @@
   <meta property="og:url" content="https://kjstudioco.com/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://kjstudioco.com/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <title>KJStudioCo — Creative that makes brands matter</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -162,7 +163,9 @@
         <p>Give us the short version. We'll use it to start a real conversation about the right creative direction, scope and next step.</p>
         <div class="inquiry-promise"><span>✳</span><p>No pressure. No vague packages.<br><strong>Just a clear next step.</strong></p></div>
       </div>
-      <form class="inquiry-form reveal" id="project-enquiry">
+      <form class="inquiry-form reveal" id="project-enquiry" name="project-enquiry" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="project-enquiry">
+        <p class="form-honeypot" hidden><label>Leave this field empty <input name="bot-field"></label></p>
         <div class="form-heading"><span>PROJECT ENQUIRY / KJ—01</span><span>TAKES ABOUT 2 MIN</span></div>
         <div class="form-grid">
           <label>Your name<input name="name" autocomplete="name" required placeholder="How should we call you?"></label>
@@ -173,8 +176,8 @@
           <label>When do you need it?<select name="timeline" required><option value="" disabled selected>Select a timeline</option><option>As soon as possible</option><option>Within 2 weeks</option><option>This month</option><option>Planning ahead</option></select></label>
           <label class="form-full">Tell us a little about the project<textarea name="message" rows="4" placeholder="Your goal, the audience, links or anything useful…"></textarea></label>
         </div>
-        <p class="form-privacy">Your details are used only to respond to this enquiry. Submitting opens your email app with the message ready to send; nothing is sent automatically.</p>
-        <button class="button button-dark form-submit" type="submit">Prepare my enquiry <span>↗</span></button>
+        <p class="form-privacy">Your details will be used only to respond to your project enquiry. Please do not include passwords or sensitive personal information.</p>
+        <button class="button button-dark form-submit" type="submit">Send project enquiry <span>↗</span></button>
         <p class="form-status" id="form-status" aria-live="polite"></p>
       </form>
     </section>
