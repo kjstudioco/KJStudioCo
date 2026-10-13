@@ -25,7 +25,7 @@
     <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
     <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
       <a href="#work">Selected work</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#approach">Approach</a><a href="#about">Studio</a>
-      <a class="nav-cta" href="mailto:Hello@kjstudioco.com?subject=Let's%20build%20something">Start a project <span>↗</span></a>
+      <a class="nav-cta" href="#contact">Start a project <span>↗</span></a>
     </nav>
   </header>
 
@@ -152,6 +152,31 @@
         <details class="faq-item reveal"><summary>Do you use AI to make the work?</summary><p>We use modern tools, including AI, to explore ideas and work efficiently. Creative direction, brand fit, editing and quality checks remain central to the process. We sell considered creative work, not a tool-generated shortcut.</p></details>
         <details class="faq-item reveal"><summary>How do we get started?</summary><p>Send a short note about your business, what you need and your timeline. We'll reply to discuss fit, scope and next steps before any work begins.</p></details>
       </div>
+    </section>
+
+
+    <section id="contact" class="inquiry-section section-wrap">
+      <div class="inquiry-intro reveal">
+        <p class="eyebrow"><span>10</span> TELL US WHAT YOU'RE BUILDING</p>
+        <h2>Start with<br><em>the idea.</em></h2>
+        <p>Give us the short version. We'll use it to start a real conversation about the right creative direction, scope and next step.</p>
+        <div class="inquiry-promise"><span>✳</span><p>No pressure. No vague packages.<br><strong>Just a clear next step.</strong></p></div>
+      </div>
+      <form class="inquiry-form reveal" id="project-enquiry">
+        <div class="form-heading"><span>PROJECT ENQUIRY / KJ—01</span><span>TAKES ABOUT 2 MIN</span></div>
+        <div class="form-grid">
+          <label>Your name<input name="name" autocomplete="name" required placeholder="How should we call you?"></label>
+          <label>Business / brand<input name="business" autocomplete="organization" required placeholder="Your brand name"></label>
+          <label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@company.com"></label>
+          <label>What do you need?<select name="service" required><option value="" disabled selected>Choose a service</option><option>Social content</option><option>Reels & short-form video</option><option>Product visuals</option><option>Brand identity</option><option>Advertising creative</option><option>Social media management</option><option>Not sure yet / custom</option></select></label>
+          <label>Approximate budget<select name="budget" required><option value="" disabled selected>Select a range</option><option>Under $100</option><option>$100–$250</option><option>$250–$500</option><option>$500–$1,000</option><option>$1,000+</option><option>Need guidance</option></select></label>
+          <label>When do you need it?<select name="timeline" required><option value="" disabled selected>Select a timeline</option><option>As soon as possible</option><option>Within 2 weeks</option><option>This month</option><option>Planning ahead</option></select></label>
+          <label class="form-full">Tell us a little about the project<textarea name="message" rows="4" placeholder="Your goal, the audience, links or anything useful…"></textarea></label>
+        </div>
+        <p class="form-privacy">Your details are used only to respond to this enquiry. Submitting opens your email app with the message ready to send; nothing is sent automatically.</p>
+        <button class="button button-dark form-submit" type="submit">Prepare my enquiry <span>↗</span></button>
+        <p class="form-status" id="form-status" aria-live="polite"></p>
+      </form>
     </section>
 
     <section class="final-cta">
