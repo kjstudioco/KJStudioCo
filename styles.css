@@ -184,3 +184,10 @@ html{scroll-padding-top:90px}
 .form-status{font-size:.72rem;color:#716e65;margin-top:12px;line-height:1.7}
 @media(max-width:800px){.inquiry-section{grid-template-columns:1fr;gap:35px;padding-top:82px;padding-bottom:88px}.inquiry-intro{position:static}.inquiry-intro h2{font-size:clamp(3.3rem,12vw,5rem)}}
 @media(max-width:480px){.inquiry-form{padding:22px 18px}.form-grid{grid-template-columns:1fr;gap:18px}.form-full{grid-column:auto}.form-heading{font-size:.48rem}.form-submit{width:100%}}
+
+
+/* Portfolio CTA + reliable tap targets */
+.portfolio-action{display:flex;align-items:center;gap:25px;flex-wrap:wrap;margin-top:26px}
+.project-visual,.case-study-link{cursor:pointer}
+.project-visual:focus-visible,.case-study-link:focus-visible{outline:2px solid #a48248;outline-offset:5px}
+@media(max-width:700px){.portfolio-action{align-items:stretch;flex-direction:column;gap:16px}.portfolio-action .button{width:100%;justify-content:space-between}}
