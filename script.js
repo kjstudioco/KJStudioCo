@@ -53,4 +53,26 @@
       target.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
     });
   });
+
+  const enquiryForm = document.querySelector("#project-enquiry");
+  if (enquiryForm) {
+    enquiryForm.addEventListener("submit", event => {
+      event.preventDefault();
+      const data = new FormData(enquiryForm);
+      const fields = [
+        ["Name", data.get("name")],
+        ["Business / brand", data.get("business")],
+        ["Reply email", data.get("email")],
+        ["Service", data.get("service")],
+        ["Budget", data.get("budget")],
+        ["Timeline", data.get("timeline")],
+        ["Project details", data.get("message") || "Not provided"]
+      ];
+      const body = fields.map(([label, value]) => label + ": " + value).join("\\n\\n");
+      const subject = encodeURIComponent("New project enquiry — " + data.get("business"));
+      const status = document.querySelector("#form-status");
+      if (status) status.textContent = "Your email app should open with the enquiry prepared. Review it and press Send to contact the studio.";
+      window.location.href = "mailto:Hello@kjstudioco.com?subject=" + subject + "&body=" + encodeURIComponent(body);
+    });
+  }
 })();
