@@ -68,7 +68,7 @@
         ["Timeline", data.get("timeline")],
         ["Project details", data.get("message") || "Not provided"]
       ];
-      const body = fields.map(([label, value]) => label + ": " + value).join("\\n\\n");
+      const body = fields.map(([label, value]) => label + ": " + value).join("\n\n");
       const subject = encodeURIComponent("New project enquiry — " + data.get("business"));
       const status = document.querySelector("#form-status");
       if (status) status.textContent = "Your email app should open with the enquiry prepared. Review it and press Send to contact the studio.";
