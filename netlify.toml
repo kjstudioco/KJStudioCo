@@ -1,3 +1,13 @@
 [build]
   # Static site with no build step; serve files from the repository root.
   publish = "."
+
+# Baseline security headers for a static marketing website.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000"
